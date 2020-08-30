@@ -33,6 +33,6 @@ func execute() (err error) {
 			log.Println(err)
 			continue
 		}
-		server.Handle(conn)
+		go server.Handle(conn)
 	}
 }
